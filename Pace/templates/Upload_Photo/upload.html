@@ -1,0 +1,26 @@
+{% extends 'main/main.html' %} 
+
+{% block content %}
+
+{% load bootstrap4 %}
+<div class="col-md-8 mt-2">
+
+
+    <div class="border  p-4">
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}    
+    
+            {% bootstrap_form form %} 
+            
+         <button type="submit" class="btn btn-primary mt-3">Upload</button>
+    
+        </form>
+    
+    
+    </div>
+</div>
+
+
+
+{% endblock %}
